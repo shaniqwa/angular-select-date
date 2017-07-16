@@ -1,0 +1,29 @@
+<p i18n="@@DateOfBirth">Date of Birth</p>
+<div class="clear"></div>
+<div [formGroup]="parentGroup">
+  <div class="col-4 float">
+    <md-select placeholder="Day" [(ngModel)]="selectedDay" [formControlName]="'birthDay'">
+      <md-option *ngFor="let day of days" [value]="day">
+        {{ day }}
+      </md-option>
+    </md-select>
+  </div>
+  <div class="col-4 float">
+    <md-select placeholder="Month" (ngModelChange)="updateDays($event)"  [(ngModel)]="selectedMonth"  [formControlName]="'birthMonth'">
+      <md-option *ngFor="let month of months" [value]="month.viewValue">
+        {{ month.viewValue }}
+      </md-option>
+    </md-select>
+  </div>
+  <div class="col-4 float">
+    <md-select placeholder="Year" [(ngModel)]="selectedYear" [formControlName]="'birthYear'">
+      <md-option *ngFor="let year of years" [value]="year">
+        {{ year }}
+      </md-option>
+    </md-select>
+  </div>
+</div>
+<div class="clear"></div>
+<!--<div class="callout callout-info">-->
+  <!--<p>Selected value: {{selectedDay}} {{selectedMonth}} {{selectedYear}}</p>-->
+<!--</div>-->

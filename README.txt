@@ -1,0 +1,1 @@
+Small Component to make it easy to pick date with angular material style. 

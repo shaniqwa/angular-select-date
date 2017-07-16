@@ -1,0 +1,16 @@
+select-birthdate{
+  width: 100%;
+}
+select-birthdate div, .float{
+  float: left;
+}
+p{
+  color: rgba(0, 0, 0, 0.38);
+}
+.clear{
+  clear: both;
+  margin: 23px 0 23px 0;
+}
+md-select{
+  width: 100%;
+}
